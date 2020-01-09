@@ -45,6 +45,7 @@ Here are few options to login a private server from the internet.
 # Q. Write a bash function that will find all occurrences of an IPv4 from a given file.
 
 monirul-bongobd-exam.sh
+
 #!/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 export DISPLAY=:0.0
