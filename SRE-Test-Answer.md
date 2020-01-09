@@ -39,4 +39,28 @@ Answer: Here are few options to login a private server from the internet.
 2.	Via an intermediate host where private IP is reachable from that that server 
 
 
+# Q. Write a bash function that will find all occurrences of an IPv4 from a given file.
+
+monirul-bongobd-exam.sh
+#!/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+export DISPLAY=:0.0
+SRE_BONGOBD="/root/file.txt"
+while IFS= read -r line
+do
+   ip="$(grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' <<< "$line")"
+  echo "$ip"
+done < "$SRE_BONGOBD"
+
+File:
+file.txt 
+
+p3p1      Link encap:Ethernet  HWaddr 90:E2:BA:15:A7:B8  
+          inet addr:202.53.169.178  Bcast:202.53.169.183  Mask:255.255.255.248
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:357467393 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:307798115 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:48838056406 (45.4 GiB)  TX bytes:208213637734 (193.9 GiB)
+          Memory:f9fa0000-f9fc0000
 
