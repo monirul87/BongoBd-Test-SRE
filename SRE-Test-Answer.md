@@ -16,4 +16,15 @@ It can be a difficult task to figure out what exactly is causing the website to 
 # b. a service needs to be low latency
 # c. if parts of a service need to be restricted to certain geographical boundaries
 
-# Answer:
+# Answer: In that case service will be down if web server down. 
+Please find the secure, scalable & resilient web architecture on AWS platform:
+
+
+# Q. Currently there’s no monitoring in place for the above single web server. How and what application will you use to monitor the resources/process in your new design?
+
+# Answer: Amazon CloudWatch for AWS server & we can use zabbix or nagios for the on premises server.
+
+
+
+
+
