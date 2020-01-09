@@ -1,5 +1,4 @@
-# Q. Certain web pages are loading slow in user’s browser for our live web application. What
-steps will you take to resolve the issue?
+# Q. Certain web pages are loading slow in user’s browser for our live web application. What steps will you take to resolve the issue?
 
 Website page load speed depends on a variety of factors such as unoptimized images, videos, a high number of HTTP requests, bulky codes, and JavaScript issues to name a few.
 It can be a difficult task to figure out what exactly is causing the website to slow down. To find out the root cause, I actually check the web server status first like CPU Usage, Disk usage, Memory usage. Then I check the web server log is there any exception or not. Another cause, If the process list is high and locked it to the  database table.
