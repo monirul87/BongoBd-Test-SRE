@@ -65,15 +65,21 @@ done < "$SRE_BONGOBD"
 
 
 
-File:
-file.txt 
+File Name: file.txt 
 
 p3p1      Link encap:Ethernet  HWaddr 90:E2:BA:15:A7:B8  
+
           inet addr:202.53.169.178  Bcast:202.53.169.183  Mask:255.255.255.248
+          
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          
           RX packets:357467393 errors:0 dropped:0 overruns:0 frame:0
+          
           TX packets:307798115 errors:0 dropped:0 overruns:0 carrier:0
+          
           collisions:0 txqueuelen:1000 
+          
           RX bytes:48838056406 (45.4 GiB)  TX bytes:208213637734 (193.9 GiB)
+          
           Memory:f9fa0000-f9fc0000
 
