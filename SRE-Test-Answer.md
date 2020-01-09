@@ -5,7 +5,7 @@ It can be a difficult task to figure out what exactly is causing the website to 
 
 Answer: Possible steps to resolve: 
 
-1.	e can use CloudFront for delivering website’s dynamic content. This will reduce the load on our servers and reduce load times for our end-users.
+1.	We can use CloudFront for delivering website’s dynamic content. This will reduce the load on our servers and reduce load times for our end-users.
 2.	With Load Balancer: We can distribute load among available web instance & With Auto Scaling: We can launch new instance if the page not load within the set request time period
 3.	Immediate action needs to be taken on the basis of web log analysis.
 
