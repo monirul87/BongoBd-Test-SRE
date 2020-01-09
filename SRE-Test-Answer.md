@@ -5,6 +5,12 @@ It can be a difficult task to figure out what exactly is causing the website to 
 
 Possible steps to resolve: 
 
-1.	we can use CloudFront for delivering website’s dynamic content. This will reduce the load on our servers and reduce load times for our end-users.
+1.	e can use CloudFront for delivering website’s dynamic content. This will reduce the load on our servers and reduce load times for our end-users.
 2.	With Load Balancer: We can distribute load among available web instance & With Auto Scaling: We can launch new instance if the page not load within the set request time period
 3.	Immediate action needs to be taken on the basis of web log analysis.
+
+
+# Q. Imagine a scenario where a web application is serving from a single web server to the internet. What are the problems in this scenario? Design and architect a solution that will mitigate these problems? Or How would you design a scalable architecture with resiliency in mind for the following situations:
+
+
+
