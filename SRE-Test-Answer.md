@@ -22,7 +22,16 @@ Please find the secure, scalable & resilient web architecture on AWS platform:
 
 # Q. Currently there’s no monitoring in place for the above single web server. How and what application will you use to monitor the resources/process in your new design?
 
-# Answer: Amazon CloudWatch for AWS server & we can use zabbix or nagios for the on premises server.
+Answer: Amazon CloudWatch for AWS server & we can use zabbix or nagios for the on premises server.
+
+# Q. In our server we want to create a user who can only view logs using `less` from this path /var/log. Please explain how to achieve this.
+
+Answer:
+1.	We need to create a user (Command: useradd monirul)
+2.	Set password for the user monirul (Command: passwd monirul)
+3.	Apply acl on /var/log for that user (Command: setfacl -m u:monirul:r-- /var/log/)
+4.	Login to the server with the user monirul
+5.	Check the log by using less command (Command: less -f /var/log)
 
 
 
