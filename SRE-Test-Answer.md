@@ -34,9 +34,12 @@ Answer:
 5.	Check the log by using less command (Command: less -f /var/log)
 
 
-Answer: Here are few options to login a private server from the internet. 
+# Q. Explain how you can ssh into a private server from the internet.
+Answer:
+Here are few options to login a private server from the internet. 
 1.	By using VPN connectivity (Private server should be accessible after establishing VPN client)
 2.	Via an intermediate host where private IP is reachable from that that server 
+
 
 
 # Q. Write a bash function that will find all occurrences of an IPv4 from a given file.
