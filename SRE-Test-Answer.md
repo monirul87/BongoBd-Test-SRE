@@ -16,7 +16,7 @@ Answer: Possible steps to resolve:
 # b. a service needs to be low latency
 # c. if parts of a service need to be restricted to certain geographical boundaries
 
-# Answer: In that case service will be down if web server down. 
+Answer: In that case service will be down if web server down. 
 Please find the secure, scalable & resilient web architecture on AWS platform:
 
 
@@ -24,6 +24,7 @@ Please find the secure, scalable & resilient web architecture on AWS platform:
 
 Answer: Amazon CloudWatch for AWS server & we can use zabbix or nagios for the on premises server.
 
+---
 # Q. In our server we want to create a user who can only view logs using `less` from this path /var/log. Please explain how to achieve this.
 
 Answer:
@@ -41,20 +42,28 @@ Here are few options to login a private server from the internet.
 2.	Via an intermediate host where private IP is reachable from that that server 
 
 
-
 # Q. Write a bash function that will find all occurrences of an IPv4 from a given file.
 
 monirul-bongobd-exam.sh
 
 #!/bin/bash
+
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
 export DISPLAY=:0.0
+
 SRE_BONGOBD="/root/file.txt"
+
 while IFS= read -r line
+
 do
    ip="$(grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' <<< "$line")"
+   
   echo "$ip"
+  
 done < "$SRE_BONGOBD"
+
+
 
 File:
 file.txt 
