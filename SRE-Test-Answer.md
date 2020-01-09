@@ -24,7 +24,7 @@ Please find the secure, scalable & resilient web architecture on AWS platform:
 
 Answer: Amazon CloudWatch for AWS server & we can use zabbix or nagios for the on premises server.
 
----
+----
 # Q. In our server we want to create a user who can only view logs using `less` from this path /var/log. Please explain how to achieve this.
 
 Answer:
