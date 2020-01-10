@@ -19,7 +19,7 @@ Answer: Possible steps to resolve:
 Answer: In that case service will be down if web server down. 
 Please find the secure, scalable & resilient web architecture on AWS platform:
 
-![alt tag](https://github.com/monirul87/BongoBd-Test-SRE/Secure, scalable & resilient architecture (BongoBd Test).png)
+![alt tag](https://github.com/monirul87/BongoBd-Test-SRE/blob/master/Secure-scalable-resilient-architecture.png)
 
 Now, let’s assume our website has been extremely successful and that due to the increase in traffic, the volume of reads to the database is becoming a problem. In this case, there are three approaches we can use:
 
