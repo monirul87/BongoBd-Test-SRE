@@ -24,31 +24,29 @@ Please find the secure, scalable & resilient web architecture on AWS platform:
 
 Now, let’s assume our website has been extremely successful and that due to the increase in traffic, the volume of reads to the database is becoming a problem. In this case, there are three approaches we can use:
 
-Scaling up: this means running our db servers on larger, more powerful EC2 instances. 
+Scaling up: this means running db servers on larger, more powerful EC2 instances. 
 This approach requires no changes to our application. However there is a limit to how big instances can be and much network throughput each instance can handle. We can use this approach as a quick fix, while we come up with a more long-term solution.
 
 Scaling out: this means adding read replicas to our databases. Even though RDS synchronously replicates our database to secondary instances in different AZs, our application cannot connect directly to any of these replicas. If we want to offload the read operations of the primary db, we need to tell RDS to create specialized read replicas.
 
 Caching db results: we can use an in-memory data store for caching db queries. Amazon Elasticache supports Memcached and Redis, and it’s the ideal solution for this use case.
 
-Summary
-Let’s go over the features of our design that contribute to the overall resiliency and availability of our website:
+Summary:
+Let’s go over the features of design that contribute to the overall resiliency and availability of website:
 
-Web servers: we have multiple EC2 instances running on multiple AZs. They are also part of an autoscaling group, which will ensure that 
-
-we always have a minimum preset of servers running.
+Web servers: we have multiple EC2 instances running on multiple AZs. They are also part of an autoscaling group, which will ensure that  always have a minimum preset of servers running.
 
 Database: the database EC2 instances are also running on multiple AZs. If the primary server goes down, RDS will automatically switch-over to a secondary replica.
 
-Caching: the website is being served via CloudFront, which will reduce the load on our web and database servers
+Caching: the website is being served via CloudFront, which will reduce the load on web and database servers
 
-Failover DNS routing: Route53 will also monitor our main website. In case it goes down, users will be redirected to an alternative static version of the site
+Failover DNS routing: Route53 will also monitor main website. In case it goes down, users will be redirected to an alternative static version of the site
 
-Caching db queries: this not only reduces request times for our users, but it also protects our database in case of sudden spikes in traffic
+Caching db queries: this not only reduces request times for our users, but it also protects database in case of sudden spikes in traffic
 
 # Q. Currently there’s no monitoring in place for the above single web server. How and what application will you use to monitor the resources/process in your new design?
 
-Answer: Amazon CloudWatch for AWS server & we can use zabbix or nagios for the on premises server.
+Answer: Amazon CloudWatch for AWS instance but I can also use zabbix or nagios for the server monitoring. Server side configuration required for those applications. 
 
 ----
 # Q. In our server we want to create a user who can only view logs using `less` from this path /var/log. Please explain how to achieve this.
@@ -65,7 +63,7 @@ Answer:
 Answer:
 Here are few options to login a private server from the internet. 
 1.	By using VPN connectivity (Private server should be accessible after establishing VPN client)
-2.	Via an intermediate host where private IP is reachable from that that server 
+2.	Via an intermediate host where private IP is reachable from that real server 
 
 
 # Q. Write a bash function that will find all occurrences of an IPv4 from a given file.
